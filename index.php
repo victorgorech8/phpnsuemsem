@@ -22,7 +22,7 @@
 
 
       <div class="form-floating">
-        <input name="name" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required >
+        <input name="name" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value= "<?php echo $_POST['name'] ?? '' ?>" required >
         <label for="floatingInput">Email address</label>
       </div>
       <div class="form-floating">
@@ -39,12 +39,14 @@
     </form>
           <p class="copyright">&copy; 2024</p>
   </main>
-
+<div class="center7">
+ 
+</div>
+<div class="center7">
   <?php
 	} else {
-		echo  "Emailadress: " . $_POST['name'] . "<br>\n";
-    echo "Пароль: " . $_POST['pass'];
+  
+		echo  '<div style="position:absolute; top:40%; left:40%">'.'<div class="center7">'.'<center>'.'<h1>'.'<pre>'.'Почта: ' . $_POST['name'] .'</pre>'.'<pre>'.'Пароль: ' . $_POST['pass'] .'</pre>'. '</h1>'.'</center>'.'</div>' .'</div>';
+    
 	}
 ?>
-
-
